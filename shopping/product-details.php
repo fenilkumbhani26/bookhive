@@ -11,7 +11,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 		$query_p = mysqli_query($con, $sql_p);
 		if (mysqli_num_rows($query_p) != 0) {
 			$row_p = mysqli_fetch_array($query_p);
-			$_SESSION['cart'][$row_p['id']] = array("quantity" => 1, "price" => $row_p['productPrice']);
+			$_SESSION['cart'][$row_p['id']] = array("quantity" => 1, "price" => $row_p['bookPrice']);
 			echo "<script>alert('Product has been added to the cart')</script>";
 			echo "<script type='text/javascript'> document.location ='my-cart.php'; </script>";
 		} else {
@@ -160,7 +160,7 @@ if (isset($_POST['submit'])) {
 												<div class="product-price">
 													<span class="price">
 														Rs.
-														<?php echo htmlentities($rws['productPrice']); ?>.00
+														<?php echo htmlentities($rws['bookPrice']); ?>.00
 													</span>
 													<span class="price-before-discount">Rs.
 														<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
@@ -315,13 +315,13 @@ if (isset($_POST['submit'])) {
 										<div class="row">
 											<div class="col-sm-3">
 												<div class="stock-box">
-													<span class="label">Product Brand :</span>
+													<span class="label">Book Author :</span>
 												</div>
 											</div>
 											<div class="col-sm-9">
 												<div class="stock-box">
 													<span class="value">
-														<?php echo htmlentities($row['productCompany']); ?>
+														<?php echo htmlentities($row['bookAuthor']); ?>
 													</span>
 												</div>
 											</div>
@@ -357,7 +357,7 @@ if (isset($_POST['submit'])) {
 											<div class="col-sm-6">
 												<div class="price-box">
 													<span class="price">Rs.
-														<?php echo htmlentities($row['productPrice']); ?>
+														<?php echo htmlentities($row['bookPrice']); ?>
 													</span>
 													<span class="price-strike">Rs.
 														<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
@@ -636,7 +636,7 @@ if (isset($_POST['submit'])) {
 									<div class="product-price">
 										<span class="price">
 											Rs.
-											<?php echo htmlentities($rw['productPrice']); ?>
+											<?php echo htmlentities($rw['bookPrice']); ?>
 										</span>
 										<span class="price-before-discount">Rs.
 											<?php echo htmlentities($rw['productPriceBeforeDiscount']); ?>

@@ -187,7 +187,7 @@ if (isset($_POST['shipupdate'])) {
 											if (!empty($query)) {
 												while ($row = mysqli_fetch_array($query)) {
 													$quantity = $_SESSION['cart'][$row['id']]['quantity'];
-													$subtotal = $_SESSION['cart'][$row['id']]['quantity'] * $row['productPrice'] + $row['shippingCharge'];
+													$subtotal = $_SESSION['cart'][$row['id']]['quantity'] * $row['bookPrice'] + $row['shippingCharge'];
 													$totalprice += $subtotal;
 													$_SESSION['qnty'] = $totalqunty += $quantity;
 
@@ -241,14 +241,14 @@ if (isset($_POST['shipupdate'])) {
 															</div>
 														</td>
 														<td class="cart-product-sub-total"><span class="cart-sub-total-price">
-																<?php echo "Rs" . " " . $row['productPrice']; ?>.00
+																<?php echo "Rs" . " " . $row['bookPrice']; ?>.00
 															</span></td>
 														<td class="cart-product-sub-total"><span class="cart-sub-total-price">
 																<?php echo "Rs" . " " . $row['shippingCharge']; ?>.00
 															</span></td>
 
 														<td class="cart-product-grand-total"><span class="cart-grand-total-price">
-																<?php echo ($_SESSION['cart'][$row['id']]['quantity'] * $row['productPrice'] + $row['shippingCharge']); ?>.00
+																<?php echo ($_SESSION['cart'][$row['id']]['quantity'] * $row['bookPrice'] + $row['shippingCharge']); ?>.00
 															</span></td>
 													</tr>
 												<?php }

@@ -9,14 +9,14 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$category = $_POST['category'];
 		$subcat = $_POST['subcategory'];
 		$productname = $_POST['productName'];
-		$productcompany = $_POST['productCompany'];
+		$bookauthor = $_POST['bookAuthor'];
 		$productprice = $_POST['productprice'];
 		$productpricebd = $_POST['productpricebd'];
 		$productdescription = $_POST['productDescription'];
 		$productscharge = $_POST['productShippingcharge'];
 		$productavailability = $_POST['productAvailability'];
 
-		$sql = mysqli_query($con, "update  products set category='$category',subCategory='$subcat',productName='$productname',productCompany='$productcompany',productPrice='$productprice',productDescription='$productdescription',shippingCharge='$productscharge',productAvailability='$productavailability',productPriceBeforeDiscount='$productpricebd' where id='$pid' ");
+		$sql = mysqli_query($con, "update  products set category='$category',subCategory='$subcat',productName='$productname',bookAuthor='$bookauthor',bookPrice='$productprice',productDescription='$productdescription',shippingCharge='$productscharge',productAvailability='$productavailability',productPriceBeforeDiscount='$productpricebd' where id='$pid' ");
 		$_SESSION['msg'] = "Product Updated Successfully !!";
 
 	}
@@ -143,11 +143,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 											</div>
 
 											<div class="control-group">
-												<label class="control-label" for="basicinput">Product Company</label>
+												<label class="control-label" for="basicinput">Book Author</label>
 												<div class="controls">
-													<input type="text" name="productCompany"
+													<input type="text" name="bookAuthor"
 														placeholder="Enter Product Comapny Name"
-														value="<?php echo htmlentities($row['productCompany']); ?>"
+														value="<?php echo htmlentities($row['bookAuthor']); ?>"
 														class="span8 tip" required>
 												</div>
 											</div>
@@ -165,8 +165,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<label class="control-label" for="basicinput">Product Price</label>
 												<div class="controls">
 													<input type="text" name="productprice" placeholder="Enter Product Price"
-														value="<?php echo htmlentities($row['productPrice']); ?>"
-														class="span8 tip" required>
+														value="<?php echo htmlentities($row['bookPrice']); ?>" class="span8 tip"
+														required>
 												</div>
 											</div>
 
@@ -175,8 +175,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<div class="controls">
 													<textarea name="productDescription" placeholder="Enter Product Description"
 														rows="6" class="span8 tip">
-														<?php echo htmlentities($row['productDescription']); ?>
-														</textarea>
+																												<?php echo htmlentities($row['productDescription']); ?>
+																												</textarea>
 												</div>
 											</div>
 

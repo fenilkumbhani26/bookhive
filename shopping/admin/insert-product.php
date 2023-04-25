@@ -9,7 +9,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$category = $_POST['category'];
 		$subcat = $_POST['subcategory'];
 		$productname = $_POST['productName'];
-		$productcompany = $_POST['productCompany'];
+		$bookauthor = $_POST['bookAuthor'];
 		$productprice = $_POST['productprice'];
 		$productpricebd = $_POST['productpricebd'];
 		$productdescription = $_POST['productDescription'];
@@ -30,7 +30,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 		move_uploaded_file($_FILES["productimage1"]["tmp_name"], "productimages/$productid/" . $_FILES["productimage1"]["name"]);
 		move_uploaded_file($_FILES["productimage2"]["tmp_name"], "productimages/$productid/" . $_FILES["productimage2"]["name"]);
 		move_uploaded_file($_FILES["productimage3"]["tmp_name"], "productimages/$productid/" . $_FILES["productimage3"]["name"]);
-		$sql = mysqli_query($con, "insert into products(category,subCategory,productName,productCompany,productPrice,productDescription,shippingCharge,productAvailability,productImage1,productImage2,productImage3,productPriceBeforeDiscount) values('$category','$subcat','$productname','$productcompany','$productprice','$productdescription','$productscharge','$productavailability','$productimage1','$productimage2','$productimage3','$productpricebd')");
+		$sql = mysqli_query($con, "insert into products(category,subCategory,productName,bookAuthor,bookPrice,productDescription,shippingCharge,productAvailability,productImage1,productImage2,productImage3,productPriceBeforeDiscount) values('$category','$subcat','$productname','$bookauthor','$productprice','$productdescription','$productscharge','$productavailability','$productimage1','$productimage2','$productimage3','$productpricebd')");
 		$_SESSION['msg'] = "Product Inserted Successfully !!";
 	}
 	?>
@@ -138,9 +138,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Product Company</label>
+											<label class="control-label" for="basicinput">Book Author</label>
 											<div class="controls">
-												<input type="text" name="productCompany"
+												<input type="text" name="bookAuthor"
 													placeholder="Enter Product Comapny Name" class="span8 tip" required>
 											</div>
 										</div>
@@ -167,7 +167,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 											<div class="controls">
 												<textarea name="productDescription" placeholder="Enter Product Description"
 													rows="6" class="span8 tip">
-										</textarea>
+																	</textarea>
 											</div>
 										</div>
 

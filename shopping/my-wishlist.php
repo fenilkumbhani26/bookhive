@@ -21,7 +21,7 @@ if (strlen($_SESSION['login']) == 0) {
 			$query_p = mysqli_query($con, $sql_p);
 			if (mysqli_num_rows($query_p) != 0) {
 				$row_p = mysqli_fetch_array($query_p);
-				$_SESSION['cart'][$row_p['id']] = array("quantity" => 1, "price" => $row_p['productPrice']);
+				$_SESSION['cart'][$row_p['id']] = array("quantity" => 1, "price" => $row_p['bookPrice']);
 				header('location:my-wishlist.php');
 			} else {
 				$message = "Product ID is invalid";
@@ -111,7 +111,7 @@ if (strlen($_SESSION['login']) == 0) {
 									</thead>
 									<tbody>
 										<?php
-										$ret = mysqli_query($con, "select products.productName as pname,products.productName as proid,products.productImage1 as pimage,products.productPrice as pprice,wishlist.productId as pid,wishlist.id as wid from wishlist join products on products.id=wishlist.productId where wishlist.userId='" . $_SESSION['id'] . "'");
+										$ret = mysqli_query($con, "select products.productName as pname,products.productName as proid,products.productImage1 as pimage,products.bookPrice as pprice,wishlist.productId as pid,wishlist.id as wid from wishlist join products on products.id=wishlist.productId where wishlist.userId='" . $_SESSION['id'] . "'");
 										$num = mysqli_num_rows($ret);
 										if ($num > 0) {
 											while ($row = mysqli_fetch_array($ret)) {

@@ -59,7 +59,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<th>Product Name</th>
 												<th>Category </th>
 												<th>Subcategory</th>
-												<th>Company Name</th>
+												<th>Author Name</th>
 												<th>Product Creation Date</th>
 												<th>Action</th>
 											</tr>
@@ -83,7 +83,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<?php echo htmlentities($row['subcategory']); ?>
 													</td>
 													<td>
-														<?php echo htmlentities($row['productCompany']); ?>
+														<?php echo htmlentities($row['bookAuthor']); ?>
 													</td>
 													<td>
 														<?php echo htmlentities($row['postingDate']); ?>

@@ -11,7 +11,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 		$query_p = mysqli_query($con, $sql_p);
 		if (mysqli_num_rows($query_p) != 0) {
 			$row_p = mysqli_fetch_array($query_p);
-			$_SESSION['cart'][$row_p['id']] = array("quantity" => 1, "price" => $row_p['productPrice']);
+			$_SESSION['cart'][$row_p['id']] = array("quantity" => 1, "price" => $row_p['bookPrice']);
 
 		} else {
 			$message = "Product ID is invalid";
@@ -138,7 +138,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 													<h4 class="info-box-heading orange">free shipping</h4>
 												</div>
 											</div>
-											<h6 class="text">free ship-on oder over Rs. 600.00</h6>
+											<h6 class="text">free ship-on oder over Rs. 400.00</h6>
 										</div>
 									</div><!-- .col -->
 
@@ -195,7 +195,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														<div class="product-price">
 															<span class="price">
 																Rs.
-																<?php echo htmlentities($row['productPrice']); ?>
+																<?php echo htmlentities($row['bookPrice']); ?>
 															</span>
 															<span class="price-before-discount">Rs.
 																<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
@@ -247,7 +247,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														<div class="product-price">
 															<span class="price">
 																Rs.
-																<?php echo htmlentities($row['productPrice']); ?>
+																<?php echo htmlentities($row['bookPrice']); ?>
 															</span>
 															<span class="price-before-discount">Rs.
 																<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
@@ -298,7 +298,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 														<div class="product-price">
 															<span class="price">
 																Rs.
-																<?php echo htmlentities($row['productPrice']); ?>
+																<?php echo htmlentities($row['bookPrice']); ?>
 															</span>
 															<span class="price-before-discount">Rs.
 																<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
