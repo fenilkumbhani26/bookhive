@@ -10,13 +10,13 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$subcat = $_POST['subcategory'];
 		$productname = $_POST['productName'];
 		$bookauthor = $_POST['bookAuthor'];
-		$productprice = $_POST['productprice'];
+		$bookprice = $_POST['bookPrice'];
 		$productpricebd = $_POST['productpricebd'];
 		$productdescription = $_POST['productDescription'];
 		$productscharge = $_POST['productShippingcharge'];
 		$productavailability = $_POST['productAvailability'];
 
-		$sql = mysqli_query($con, "update  products set category='$category',subCategory='$subcat',productName='$productname',bookAuthor='$bookauthor',bookPrice='$productprice',productDescription='$productdescription',shippingCharge='$productscharge',productAvailability='$productavailability',productPriceBeforeDiscount='$productpricebd' where id='$pid' ");
+		$sql = mysqli_query($con, "update  products set category='$category',subCategory='$subcat',productName='$productname',bookAuthor='$bookauthor',bookPrice='$bookprice',productDescription='$productdescription',shippingCharge='$productscharge',productAvailability='$productavailability',productPriceBeforeDiscount='$productpricebd' where id='$pid' ");
 		$_SESSION['msg'] = "Product Updated Successfully !!";
 
 	}
@@ -164,7 +164,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 											<div class="control-group">
 												<label class="control-label" for="basicinput">Product Price</label>
 												<div class="controls">
-													<input type="text" name="productprice" placeholder="Enter Product Price"
+													<input type="text" name="bookPrice" placeholder="Enter Product Price"
 														value="<?php echo htmlentities($row['bookPrice']); ?>" class="span8 tip"
 														required>
 												</div>
@@ -175,8 +175,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<div class="controls">
 													<textarea name="productDescription" placeholder="Enter Product Description"
 														rows="6" class="span8 tip">
-																												<?php echo htmlentities($row['productDescription']); ?>
-																												</textarea>
+																																<?php echo htmlentities($row['productDescription']); ?>
+																																</textarea>
 												</div>
 											</div>
 

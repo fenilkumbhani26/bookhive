@@ -80,7 +80,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 											$from = date('Y-m-d') . " " . $f1;
 											$t1 = "23:59:59";
 											$to = date('Y-m-d') . " " . $t1;
-											$query = mysqli_query($con, "select users.name as username,users.email as useremail,users.contactno as usercontact,users.shippingAddress as shippingaddress,users.shippingCity as shippingcity,users.shippingState as shippingstate,users.shippingPincode as shippingpincode,products.productName as productname,products.shippingCharge as shippingcharge,orders.quantity as quantity,orders.orderDate as orderdate,products.bookPrice as productprice,orders.id as id  from orders join users on  orders.userId=users.id join products on products.id=orders.productId where orders.orderDate Between '$from' and '$to'");
+											$query = mysqli_query($con, "select users.name as username,users.email as useremail,users.contactno as usercontact,users.shippingAddress as shippingaddress,users.shippingCity as shippingcity,users.shippingState as shippingstate,users.shippingPincode as shippingpincode,products.productName as productname,products.shippingCharge as shippingcharge,orders.quantity as quantity,orders.orderDate as orderdate,products.bookPrice as bookprice,orders.id as id  from orders join users on  orders.userId=users.id join products on products.id=orders.productId where orders.orderDate Between '$from' and '$to'");
 											$cnt = 1;
 											while ($row = mysqli_fetch_array($query)) {
 												?>
@@ -106,7 +106,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<?php echo htmlentities($row['quantity']); ?>
 													</td>
 													<td>
-														<?php echo htmlentities($row['quantity'] * $row['productprice'] + $row['shippingcharge']); ?>
+														<?php echo htmlentities($row['quantity'] * $row['bookprice'] + $row['shippingcharge']); ?>
 													</td>
 													<td>
 														<?php echo htmlentities($row['orderdate']); ?>
