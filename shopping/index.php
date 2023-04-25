@@ -188,7 +188,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 													</div><!-- /.product-image -->
 													<div class="product-info text-left">
 														<h3 class="name"><a
-																href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
+																href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['bookName']); ?></a></h3>
 														<div class="rating rateit-small"></div>
 														<div class="description"></div>
 
@@ -198,11 +198,11 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 																<?php echo htmlentities($row['bookPrice']); ?>
 															</span>
 															<span class="price-before-discount">Rs.
-																<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
+																<?php echo htmlentities($row['bookPriceBeforeDiscount']); ?>
 															</span>
 														</div><!-- /.product-price -->
 													</div><!-- /.product-info -->
-													<?php if ($row['productAvailability'] == 'In Stock') { ?>
+													<?php if ($row['bookAvailability'] == 'In Stock') { ?>
 														<div class="action"><a
 																href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>"
 																class="lnk btn btn-primary">Add to Cart</a></div>
@@ -240,7 +240,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 													</div><!-- /.product-image -->
 													<div class="product-info text-left">
 														<h3 class="name"><a
-																href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
+																href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['bookName']); ?></a></h3>
 														<div class="rating rateit-small"></div>
 														<div class="description"></div>
 
@@ -250,11 +250,11 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 																<?php echo htmlentities($row['bookPrice']); ?>
 															</span>
 															<span class="price-before-discount">Rs.
-																<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
+																<?php echo htmlentities($row['bookPriceBeforeDiscount']); ?>
 															</span>
 														</div><!-- /.product-price -->
 													</div><!-- /.product-info -->
-													<?php if ($row['productAvailability'] == 'In Stock') { ?>
+													<?php if ($row['bookAvailability'] == 'In Stock') { ?>
 														<div class="action"><a
 																href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>"
 																class="lnk btn btn-primary">Add to Cart</a></div>
@@ -291,7 +291,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 													</div>
 													<div class="product-info text-left">
 														<h3 class="name"><a
-																href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
+																href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['bookName']); ?></a></h3>
 														<div class="rating rateit-small"></div>
 														<div class="description"></div>
 
@@ -301,11 +301,11 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 																<?php echo htmlentities($row['bookPrice']); ?>
 															</span>
 															<span class="price-before-discount">Rs.
-																<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
+																<?php echo htmlentities($row['bookPriceBeforeDiscount']); ?>
 															</span>
 														</div>
 													</div>
-													<?php if ($row['productAvailability'] == 'In Stock') { ?>
+													<?php if ($row['bookAvailability'] == 'In Stock') { ?>
 														<div class="action"><a
 																href="index.php?page=product&action=add&id=<?php echo $row['id']; ?>"
 																class="lnk btn btn-primary">Add to Cart</a></div>

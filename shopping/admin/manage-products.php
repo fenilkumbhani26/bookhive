@@ -18,7 +18,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Admin| Manage Products</title>
+		<title>Admin| manage books</title>
 		<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 		<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -39,7 +39,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 							<div class="module">
 								<div class="module-head">
-									<h3>Manage Products</h3>
+									<h3>manage books</h3>
 								</div>
 								<div class="module-body table">
 									<?php if (isset($_GET['del'])) { ?>
@@ -56,7 +56,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 										<thead>
 											<tr>
 												<th>#</th>
-												<th>Product Name</th>
+												<th>Book Name</th>
 												<th>Category </th>
 												<th>Subcategory</th>
 												<th>Author Name</th>
@@ -74,7 +74,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<?php echo htmlentities($cnt); ?>
 													</td>
 													<td>
-														<?php echo htmlentities($row['productName']); ?>
+														<?php echo htmlentities($row['bookName']); ?>
 													</td>
 													<td>
 														<?php echo htmlentities($row['categoryName']); ?>

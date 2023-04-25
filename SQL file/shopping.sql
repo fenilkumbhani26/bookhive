@@ -172,16 +172,16 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `category` int(11) NOT NULL,
   `subCategory` int(11) DEFAULT NULL,
-  `productName` varchar(255) DEFAULT NULL,
+  `bookName` varchar(255) DEFAULT NULL,
   `bookAuthor` varchar(255) DEFAULT NULL,
   `bookPrice` int(11) DEFAULT NULL,
-  `productPriceBeforeDiscount` int(11) DEFAULT NULL,
-  `productDescription` longtext DEFAULT NULL,
+  `bookPriceBeforeDiscount` int(11) DEFAULT NULL,
+  `bookDescription` longtext DEFAULT NULL,
   `productImage1` varchar(255) DEFAULT NULL,
   `productImage2` varchar(255) DEFAULT NULL,
   `productImage3` varchar(255) DEFAULT NULL,
   `shippingCharge` int(11) DEFAULT NULL,
-  `productAvailability` varchar(255) DEFAULT NULL,
+  `bookAvailability` varchar(255) DEFAULT NULL,
   `postingDate` timestamp NULL DEFAULT current_timestamp(),
   `updationDate` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -190,7 +190,7 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category`, `subCategory`, `productName`, `bookAuthor`, `bookPrice`, `productPriceBeforeDiscount`, `productDescription`, `productImage1`, `productImage2`, `productImage3`, `shippingCharge`, `productAvailability`, `postingDate`, `updationDate`) VALUES
+INSERT INTO `products` (`id`, `category`, `subCategory`, `bookName`, `bookAuthor`, `bookPrice`, `bookPriceBeforeDiscount`, `bookDescription`, `productImage1`, `productImage2`, `productImage3`, `shippingCharge`, `bookAvailability`, `postingDate`, `updationDate`) VALUES
 (1, 1, 1, 'Nasivion Classic Adult 0.05% Nasal Spray  ', 'Merck Ltd', 66, 79, '<div>Information about Nasivion Classic Adult 0.05% Nasal Spray</div><div>Benefits:&nbsp;</div><div>Nasivion Classic Adult Nasal Spray decongests a blocked nose quickly for fast relief. It comes in an easy squeeze bottle – releasing a mist that starts working as fast as 25 seconds and provides relief up to 12 hours. On a blocked nose, nothing works faster than Nasivion</div><div>&nbsp;</div><div>Ingredients:</div><div>Each ml of Nasivion Classic Adult Nasal Spray contains:</div><div>0.5 mg Oxymetazoline Hydrochloride USP (active ingredient) in buffered aqueous solution&nbsp;</div><div>0.3 mg Benzalkonium Chloride Solution 50% IP (as preservative)</div><div>&nbsp;</div><div>Dosage and frequency of use:</div><div>Spray one puff into each nostril 2-3 times per day OR Instil 1-2 drops of the solution into each nostril 2-3 times per day</div><div>&nbsp;</div><div>Storage instructions:</div><div>Preserve in tight containers at a temperature not exceeding 30°C</div><div>Close the cap tightly after use</div><div>Do not use if seal is broken&nbsp;</div><div>Keep out of reach of children&nbsp;</div><div>&nbsp;</div><div>How to use:&nbsp;</div><div>Clean your nose by gently blowing over a handkerchief or tissue&nbsp;</div><div>Insert the nozzle into affected nostril by tilting the head forward in erect posture</div><div>Use the spray by squeezing the bottle once and continue normal breathing inwards (inhalation)</div><div>Release the pressure from the bottle and comfortably remove the nozzle from the nostril&nbsp;</div><div>Repeat the same steps while applying in the other nostril</div><div>Do not forget to replace the cap tightly after use</div>', 'tw0ldub9wtmharc136eb.png', 'tw0ldub9wtmharc136eb.png', 'tw0ldub9wtmharc136eb.png', 29, 'In Stock', '2021-06-19 06:51:59', NULL),
 (2, 1, 2, 'Paracip 500 Tablet', 'Cipla Ltd', 39, 45, '<div>BENEFITS OF PARACIP 500 TABLET</div><div>In Pain relief</div><div>Paracip 500 Tablet is a common painkiller used to treat aches and pains. It works by blocking chemical messengers in the brain that tell us we have pain. It is effective in relieving pain caused by headache, migraine, nerve pain, toothache, sore throat, period (menstrual) pains, arthritis, and muscle aches. This medicine is very widely used and very rarely causes side effects if taken at the right dosage. Take it as it is prescribed to get the most benefit. Do not take more or for longer than needed as that can be dangerous. In general, you should take the lowest dose that works, for the shortest possible time. It is also the first choice of painkiller during pregnancy or breastfeeding.</div>', 'edjvqk3zm2vdh1sd0scr.jpg', 'pdczhazhyh21vlipsusb.jpg', 'xtleofc4v0jgebvz6oyn.jpg', 0, 'In Stock', '2021-06-19 06:55:40', NULL),
 (3, 1, 3, 'Crocin Pain Relief Tablet', 'GlaxoSmithKline Consumer Healthcare', 49, 59, '<div>USES OF CROCIN TABLET</div><div>Treatment of Headache</div><div>BENEFITS OF CROCIN TABLET</div><div>In Treatment of Headache</div><div>Crocin Pain Relief Tablet is a painkiller used to treat headache. It works by blocking chemical messengers in the brain that tell us we have pain. By treating headache, it can help you carry out your daily activities and have a better quality of life. Take Crocin Pain Relief Tablet as prescribed by the doctor to get the most benefit. Do not take more or for longer than needed as that can be dangerous. In general, you should take the lowest dose that works, for the shortest possible time.</div><div>SIDE EFFECTS OF CROCIN TABLET</div><div>Most side effects do not require any medical attention and disappear as your body adjusts to the medicine. Consult your doctor if they persist or if you’re worried about them</div>', 'onav4rssxbdwvk1pedey.jpg', 'f6ewpyttm6aat6oz08b9.jpg', 'kak1b2o6qll6qpmmx9v3.jpg', 29, 'In Stock', '2021-06-19 06:59:26', NULL),

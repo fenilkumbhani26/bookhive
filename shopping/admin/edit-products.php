@@ -8,15 +8,15 @@ if (strlen($_SESSION['alogin']) == 0) {
 	if (isset($_POST['submit'])) {
 		$category = $_POST['category'];
 		$subcat = $_POST['subcategory'];
-		$productname = $_POST['productName'];
+		$productname = $_POST['bookName'];
 		$bookauthor = $_POST['bookAuthor'];
 		$bookprice = $_POST['bookPrice'];
 		$productpricebd = $_POST['productpricebd'];
-		$productdescription = $_POST['productDescription'];
+		$bookDescription = $_POST['bookDescription'];
 		$productscharge = $_POST['productShippingcharge'];
-		$productavailability = $_POST['productAvailability'];
+		$bookavailability = $_POST['bookAvailability'];
 
-		$sql = mysqli_query($con, "update  products set category='$category',subCategory='$subcat',productName='$productname',bookAuthor='$bookauthor',bookPrice='$bookprice',productDescription='$productdescription',shippingCharge='$productscharge',productAvailability='$productavailability',productPriceBeforeDiscount='$productpricebd' where id='$pid' ");
+		$sql = mysqli_query($con, "update  products set category='$category',subCategory='$subcat',bookName='$productname',bookAuthor='$bookauthor',bookPrice='$bookprice',bookDescription='$bookDescription',shippingCharge='$productscharge',bookAvailability='$bookavailability',bookPriceBeforeDiscount='$productpricebd' where id='$pid' ");
 		$_SESSION['msg'] = "Product Updated Successfully !!";
 
 	}
@@ -29,7 +29,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Admin| Insert Product</title>
+		<title>Admin| Insert Book</title>
 		<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 		<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -69,7 +69,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 							<div class="module">
 								<div class="module-head">
-									<h3>Insert Product</h3>
+									<h3>Insert Book</h3>
 								</div>
 								<div class="module-body">
 
@@ -134,49 +134,47 @@ if (strlen($_SESSION['alogin']) == 0) {
 											</div>
 
 											<div class="control-group">
-												<label class="control-label" for="basicinput">Product Name</label>
+												<label class="control-label" for="basicinput">Book Name</label>
 												<div class="controls">
-													<input type="text" name="productName" placeholder="Enter Product Name"
-														value="<?php echo htmlentities($row['productName']); ?>"
-														class="span8 tip">
+													<input type="text" name="bookName" placeholder="Enter Book Name"
+														value="<?php echo htmlentities($row['bookName']); ?>" class="span8 tip">
 												</div>
 											</div>
 
 											<div class="control-group">
 												<label class="control-label" for="basicinput">Book Author</label>
 												<div class="controls">
-													<input type="text" name="bookAuthor"
-														placeholder="Enter Product Comapny Name"
+													<input type="text" name="bookAuthor" placeholder="Enter Author Name"
 														value="<?php echo htmlentities($row['bookAuthor']); ?>"
 														class="span8 tip" required>
 												</div>
 											</div>
 											<div class="control-group">
-												<label class="control-label" for="basicinput">Product Price Before
-													Discount</label>
+												<label class="control-label" for="basicinput">Book Price
+													Before Discount</label>
 												<div class="controls">
-													<input type="text" name="productpricebd" placeholder="Enter Product Price"
-														value="<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>"
+													<input type="text" name="productpricebd" placeholder="Enter Book Price"
+														value="<?php echo htmlentities($row['bookPriceBeforeDiscount']); ?>"
 														class="span8 tip" required>
 												</div>
 											</div>
 
 											<div class="control-group">
-												<label class="control-label" for="basicinput">Product Price</label>
+												<label class="control-label" for="basicinput">Book Price</label>
 												<div class="controls">
-													<input type="text" name="bookPrice" placeholder="Enter Product Price"
+													<input type="text" name="bookPrice" placeholder="Enter Book Price"
 														value="<?php echo htmlentities($row['bookPrice']); ?>" class="span8 tip"
 														required>
 												</div>
 											</div>
 
 											<div class="control-group">
-												<label class="control-label" for="basicinput">Product Description</label>
+												<label class="control-label" for="basicinput">Book Description</label>
 												<div class="controls">
-													<textarea name="productDescription" placeholder="Enter Product Description"
+													<textarea name="bookDescription" placeholder="Enter Book Description"
 														rows="6" class="span8 tip">
-																																<?php echo htmlentities($row['productDescription']); ?>
-																																</textarea>
+																																																																		<?php echo htmlentities($row['bookDescription']); ?>
+																																																																		</textarea>
 												</div>
 											</div>
 
@@ -193,11 +191,10 @@ if (strlen($_SESSION['alogin']) == 0) {
 											<div class="control-group">
 												<label class="control-label" for="basicinput">Product Availability</label>
 												<div class="controls">
-													<select name="productAvailability" id="productAvailability"
-														class="span8 tip" required>
-														<option
-															value="<?php echo htmlentities($row['productAvailability']); ?>">
-															<?php echo htmlentities($row['productAvailability']); ?></option>
+													<select name="bookAvailability" id="bookAvailability" class="span8 tip"
+														required>
+														<option value="<?php echo htmlentities($row['bookAvailability']); ?>">
+															<?php echo htmlentities($row['bookAvailability']); ?></option>
 														<option value="In Stock">In Stock</option>
 														<option value="Out of Stock">Out of Stock</option>
 													</select>

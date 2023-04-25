@@ -6,7 +6,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 } else {
 	$pid = intval($_GET['id']); // product id
 	if (isset($_POST['submit'])) {
-		$productname = $_POST['productName'];
+		$productname = $_POST['bookName'];
 		$productimage1 = $_FILES["productimage1"]["name"];
 		//$dir="productimages";
 //unlink($dir.'/'.$pimage);
@@ -80,16 +80,16 @@ if (strlen($_SESSION['alogin']) == 0) {
 									<form class="form-horizontal row-fluid" name="insertproduct" method="post"
 										enctype="multipart/form-data">
 										<?php
-										$query = mysqli_query($con, "select productName,productImage1 from products where id='$pid'");
+										$query = mysqli_query($con, "select bookName,productImage1 from products where id='$pid'");
 										$cnt = 1;
 										while ($row = mysqli_fetch_array($query)) {
 											?>
 											<div class="control-group">
-												<label class="control-label" for="basicinput">Product Name</label>
+												<label class="control-label" for="basicinput">Book Name</label>
 												<div class="controls">
-													<input type="text" name="productName" readonly
-														value="<?php echo htmlentities($row['productName']); ?>"
-														class="span8 tip" required>
+													<input type="text" name="bookName" readonly
+														value="<?php echo htmlentities($row['bookName']); ?>" class="span8 tip"
+														required>
 												</div>
 											</div>
 											<div class="control-group">

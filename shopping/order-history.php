@@ -86,7 +86,7 @@ if (strlen($_SESSION['login']) == 0) {
 											<tr>
 												<th class="cart-romove item">#</th>
 												<th class="cart-description item">Image</th>
-												<th class="cart-product-name item">Product Name</th>
+												<th class="cart-product-name item">Book Name</th>
 												<th class="cart-qty item">Quantity</th>
 												<th class="cart-sub-total item">Price Per unit</th>
 												<th class="cart-sub-total item">Shipping Charge</th>
@@ -98,7 +98,7 @@ if (strlen($_SESSION['login']) == 0) {
 										</thead><!-- /thead -->
 
 										<tbody>
-											<?php $query = mysqli_query($con, "select products.productImage1 as pimg1,products.productName as pname,products.id as proid,orders.productId as opid,orders.quantity as qty,products.bookPrice as pprice,products.shippingCharge as shippingcharge,orders.paymentMethod as paym,orders.orderDate as odate,orders.id as orderid from orders join products on orders.productId=products.id where orders.userId='" . $_SESSION['id'] . "' and orders.paymentMethod is not null");
+											<?php $query = mysqli_query($con, "select products.productImage1 as pimg1,products.bookName as pname,products.id as proid,orders.productId as opid,orders.quantity as qty,products.bookPrice as pprice,products.shippingCharge as shippingcharge,orders.paymentMethod as paym,orders.orderDate as odate,orders.id as orderid from orders join products on orders.productId=products.id where orders.userId='" . $_SESSION['id'] . "' and orders.paymentMethod is not null");
 											$cnt = 1;
 											while ($row = mysqli_fetch_array($query)) {
 												?>

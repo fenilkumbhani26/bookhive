@@ -6,7 +6,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 } else {
 	$pid = intval($_GET['id']); // product id
 	if (isset($_POST['submit'])) {
-		$productname = $_POST['productName'];
+		$productname = $_POST['bookName'];
 		$productimage3 = $_FILES["productimage3"]["name"];
 
 
@@ -25,7 +25,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Admin| Insert Product</title>
+		<title>Admin| Insert Book</title>
 		<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 		<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -84,16 +84,16 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 										<?php
 
-										$query = mysqli_query($con, "select productName,productImage3 from products where id='$pid'");
+										$query = mysqli_query($con, "select bookName,productImage3 from products where id='$pid'");
 										$cnt = 1;
 										while ($row = mysqli_fetch_array($query)) {
 											?>
 											<div class="control-group">
-												<label class="control-label" for="basicinput">Product Name</label>
+												<label class="control-label" for="basicinput">Book Name</label>
 												<div class="controls">
-													<input type="text" name="productName" readonly
-														value="<?php echo htmlentities($row['productName']); ?>"
-														class="span8 tip" required>
+													<input type="text" name="bookName" readonly
+														value="<?php echo htmlentities($row['bookName']); ?>" class="span8 tip"
+														required>
 												</div>
 											</div>
 

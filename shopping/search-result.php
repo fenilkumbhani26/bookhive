@@ -177,7 +177,7 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 								<div class="category-product  inner-top-vs">
 									<div class="row">
 										<?php
-										$ret = mysqli_query($con, "select * from products where productName like '$find'");
+										$ret = mysqli_query($con, "select * from products where bookName like '$find'");
 										$num = mysqli_num_rows($ret);
 										if ($num > 0) {
 											while ($row = mysqli_fetch_array($ret)) { ?>
@@ -196,7 +196,7 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 
 															<div class="product-info text-left">
 																<h3 class="name"><a
-																		href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
+																		href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['bookName']); ?></a></h3>
 																<div class="rating rateit-small"></div>
 																<div class="description"></div>
 																<div class="product-price">
@@ -205,7 +205,7 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 																		<?php echo htmlentities($row['bookPrice']); ?>
 																	</span>
 																	<span class="price-before-discount">Rs.
-																		<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
+																		<?php echo htmlentities($row['bookPriceBeforeDiscount']); ?>
 																	</span>
 																</div><!-- /.product-price -->
 															</div><!-- /.product-info -->
@@ -213,7 +213,7 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 																<div class="action">
 																	<ul class="list-unstyled">
 																		<li class="add-cart-button btn-group">
-																			<?php if ($row['productAvailability'] == 'In Stock') { ?>
+																			<?php if ($row['bookAvailability'] == 'In Stock') { ?>
 																				<button class="btn btn-primary icon"
 																					data-toggle="dropdown" type="button">
 																					<i class="fa fa-shopping-cart"></i>

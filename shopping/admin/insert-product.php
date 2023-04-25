@@ -8,13 +8,13 @@ if (strlen($_SESSION['alogin']) == 0) {
 	if (isset($_POST['submit'])) {
 		$category = $_POST['category'];
 		$subcat = $_POST['subcategory'];
-		$productname = $_POST['productName'];
+		$productname = $_POST['bookName'];
 		$bookauthor = $_POST['bookAuthor'];
 		$bookprice = $_POST['bookPrice'];
 		$productpricebd = $_POST['productpricebd'];
-		$productdescription = $_POST['productDescription'];
+		$bookDescription = $_POST['bookDescription'];
 		$productscharge = $_POST['productShippingcharge'];
-		$productavailability = $_POST['productAvailability'];
+		$bookavailability = $_POST['bookAvailability'];
 		$productimage1 = $_FILES["productimage1"]["name"];
 		$productimage2 = $_FILES["productimage2"]["name"];
 		$productimage3 = $_FILES["productimage3"]["name"];
@@ -30,7 +30,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 		move_uploaded_file($_FILES["productimage1"]["tmp_name"], "productimages/$productid/" . $_FILES["productimage1"]["name"]);
 		move_uploaded_file($_FILES["productimage2"]["tmp_name"], "productimages/$productid/" . $_FILES["productimage2"]["name"]);
 		move_uploaded_file($_FILES["productimage3"]["tmp_name"], "productimages/$productid/" . $_FILES["productimage3"]["name"]);
-		$sql = mysqli_query($con, "insert into products(category,subCategory,productName,bookAuthor,bookPrice,productDescription,shippingCharge,productAvailability,productImage1,productImage2,productImage3,productPriceBeforeDiscount) values('$category','$subcat','$productname','$bookauthor','$bookprice','$productdescription','$productscharge','$productavailability','$productimage1','$productimage2','$productimage3','$productpricebd')");
+		$sql = mysqli_query($con, "insert into products(category,subCategory,bookName,bookAuthor,bookPrice,bookDescription,shippingCharge,bookAvailability,productImage1,productImage2,productImage3,bookPriceBeforeDiscount) values('$category','$subcat','$productname','$bookauthor','$bookprice','$bookDescription','$productscharge','$bookavailability','$productimage1','$productimage2','$productimage3','$productpricebd')");
 		$_SESSION['msg'] = "Product Inserted Successfully !!";
 	}
 	?>
@@ -40,7 +40,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Admin| Insert Product</title>
+		<title>Admin| Insert Book</title>
 		<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 		<link type="text/css" href="css/theme.css" rel="stylesheet">
@@ -81,7 +81,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 							<div class="module">
 								<div class="module-head">
-									<h3>Insert Product</h3>
+									<h3>Insert Book</h3>
 								</div>
 								<div class="module-body">
 
@@ -130,9 +130,9 @@ if (strlen($_SESSION['alogin']) == 0) {
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Product Name</label>
+											<label class="control-label" for="basicinput">Book Name</label>
 											<div class="controls">
-												<input type="text" name="productName" placeholder="Enter Product Name"
+												<input type="text" name="bookName" placeholder="Enter Book Name"
 													class="span8 tip" required>
 											</div>
 										</div>
@@ -140,8 +140,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 										<div class="control-group">
 											<label class="control-label" for="basicinput">Book Author</label>
 											<div class="controls">
-												<input type="text" name="bookAuthor"
-													placeholder="Enter Product Comapny Name" class="span8 tip" required>
+												<input type="text" name="bookAuthor" placeholder="Enter Author Name"
+													class="span8 tip" required>
 											</div>
 										</div>
 										<div class="control-group">
@@ -163,11 +163,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 										</div>
 
 										<div class="control-group">
-											<label class="control-label" for="basicinput">Product Description</label>
+											<label class="control-label" for="basicinput">Book Description</label>
 											<div class="controls">
-												<textarea name="productDescription" placeholder="Enter Product Description"
+												<textarea name="bookDescription" placeholder="Enter Book Description"
 													rows="6" class="span8 tip">
-																										</textarea>
+																																	</textarea>
 											</div>
 										</div>
 
@@ -182,8 +182,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 										<div class="control-group">
 											<label class="control-label" for="basicinput">Product Availability</label>
 											<div class="controls">
-												<select name="productAvailability" id="productAvailability"
-													class="span8 tip" required>
+												<select name="bookAvailability" id="bookAvailability" class="span8 tip"
+													required>
 													<option value="">Select</option>
 													<option value="In Stock">In Stock</option>
 													<option value="Out of Stock">Out of Stock</option>

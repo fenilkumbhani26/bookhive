@@ -188,7 +188,7 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 
 															<div class="product-info text-left">
 																<h3 class="name"><a
-																		href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['productName']); ?></a></h3>
+																		href="product-details.php?pid=<?php echo htmlentities($row['id']); ?>"><?php echo htmlentities($row['bookName']); ?></a></h3>
 																<div class="rating rateit-small"></div>
 																<div class="description"></div>
 
@@ -198,7 +198,7 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 																		<?php echo htmlentities($row['bookPrice']); ?>
 																	</span>
 																	<span class="price-before-discount">Rs.
-																		<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
+																		<?php echo htmlentities($row['bookPriceBeforeDiscount']); ?>
 																	</span>
 																</div><!-- /.product-price -->
 
@@ -207,7 +207,7 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 																<div class="action">
 																	<ul class="list-unstyled">
 																		<li class="add-cart-button btn-group">
-																			<?php if ($row['productAvailability'] == 'In Stock') { ?>
+																			<?php if ($row['bookAvailability'] == 'In Stock') { ?>
 																				<button class="btn btn-primary icon"
 																					data-toggle="dropdown" type="button">
 																					<i class="fa fa-shopping-cart"></i>

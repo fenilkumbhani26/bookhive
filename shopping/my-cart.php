@@ -23,7 +23,7 @@ if (isset($_POST['remove_code'])) {
 		echo "<script>alert('Your Cart has been Updated');</script>";
 	}
 }
-// code for insert product in order table
+// code for Insert Book in order table
 
 if (isset($_POST['ordersubmit'])) {
 
@@ -150,7 +150,7 @@ if (isset($_POST['shipupdate'])) {
 											<tr>
 												<th class="cart-romove item">Remove</th>
 												<th class="cart-description item">Image</th>
-												<th class="cart-product-name item">Product Name</th>
+												<th class="cart-product-name item">Book Name</th>
 
 												<th class="cart-qty item">Quantity</th>
 												<th class="cart-sub-total item">Price Per unit</th>
@@ -206,7 +206,7 @@ if (isset($_POST['shipupdate'])) {
 														</td>
 														<td class="cart-product-name-info">
 															<h4 class='cart-product-description'><a
-																	href="product-details.php?pid=<?php echo htmlentities($pd = $row['id']); ?>"><?php echo $row['productName'];
+																	href="product-details.php?pid=<?php echo htmlentities($pd = $row['id']); ?>"><?php echo $row['bookName'];
 
 																		 $_SESSION['sid'] = $pd;
 																		 ?></a></h4>

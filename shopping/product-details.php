@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
 		<div class="container">
 			<div class="breadcrumb-inner">
 				<?php
-				$ret = mysqli_query($con, "select category.categoryName as catname,subCategory.subcategory as subcatname,products.productName as pname from products join category on category.id=products.category join subcategory on subcategory.id=products.subCategory where products.id='$pid'");
+				$ret = mysqli_query($con, "select category.categoryName as catname,subCategory.subcategory as subcatname,products.bookName as pname from products join category on category.id=products.category join subcategory on subcategory.id=products.subCategory where products.id='$pid'");
 				while ($rw = mysqli_fetch_array($ret)) {
 					?>
 					<ul class="list-inline list-unstyled">
@@ -154,7 +154,7 @@ if (isset($_POST['submit'])) {
 											</div><!-- /.hot-deal-wrapper -->
 											<div class="product-info text-left m-t-20">
 												<h3 class="name"><a
-														href="product-details.php?pid=<?php echo htmlentities($rws['id']); ?>"><?php echo htmlentities($rws['productName']); ?></a></h3>
+														href="product-details.php?pid=<?php echo htmlentities($rws['id']); ?>"><?php echo htmlentities($rws['bookName']); ?></a></h3>
 												<div class="rating rateit-small"></div>
 
 												<div class="product-price">
@@ -163,7 +163,7 @@ if (isset($_POST['submit'])) {
 														<?php echo htmlentities($rws['bookPrice']); ?>.00
 													</span>
 													<span class="price-before-discount">Rs.
-														<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
+														<?php echo htmlentities($row['bookPriceBeforeDiscount']); ?>
 													</span>
 												</div><!-- /.product-price -->
 											</div><!-- /.product-info -->
@@ -172,7 +172,7 @@ if (isset($_POST['submit'])) {
 													<div class="add-cart-button btn-group">
 														<button class="btn btn-primary icon" data-toggle="dropdown"
 															type="button">
-															<?php if ($row['productAvailability'] == 'In Stock') { ?>
+															<?php if ($row['bookAvailability'] == 'In Stock') { ?>
 																<button class="btn btn-primary icon" data-toggle="dropdown"
 																	type="button">
 																	<i class="fa fa-shopping-cart"></i>
@@ -206,7 +206,7 @@ if (isset($_POST['submit'])) {
 									<div id="owl-single-product">
 										<div class="single-product-gallery-item" id="slide1">
 											<a data-lightbox="image-1"
-												data-title="<?php echo htmlentities($row['productName']); ?>"
+												data-title="<?php echo htmlentities($row['bookName']); ?>"
 												href="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>">
 												<img class="img-responsive" alt="" src="assets/images/blank.gif"
 													data-echo="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>"
@@ -215,7 +215,7 @@ if (isset($_POST['submit'])) {
 										</div>
 										<div class="single-product-gallery-item" id="slide1">
 											<a data-lightbox="image-1"
-												data-title="<?php echo htmlentities($row['productName']); ?>"
+												data-title="<?php echo htmlentities($row['bookName']); ?>"
 												href="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>">
 												<img class="img-responsive" alt="" src="assets/images/blank.gif"
 													data-echo="admin/productimages/<?php echo htmlentities($row['id']); ?>/<?php echo htmlentities($row['productImage1']); ?>"
@@ -274,7 +274,7 @@ if (isset($_POST['submit'])) {
 							<div class='col-sm-6 col-md-7 product-info-block'>
 								<div class="product-info">
 									<h1 class="name">
-										<?php echo htmlentities($row['productName']); ?>
+										<?php echo htmlentities($row['bookName']); ?>
 									</h1>
 									<?php $rt = mysqli_query($con, "select * from productreviews where productId='$pid'");
 									$num = mysqli_num_rows($rt); {
@@ -304,7 +304,7 @@ if (isset($_POST['submit'])) {
 											<div class="col-sm-9">
 												<div class="stock-box">
 													<span class="value">
-														<?php echo htmlentities($row['productAvailability']); ?>
+														<?php echo htmlentities($row['bookAvailability']); ?>
 													</span>
 												</div>
 											</div>
@@ -360,7 +360,7 @@ if (isset($_POST['submit'])) {
 														<?php echo htmlentities($row['bookPrice']); ?>
 													</span>
 													<span class="price-strike">Rs.
-														<?php echo htmlentities($row['productPriceBeforeDiscount']); ?>
+														<?php echo htmlentities($row['bookPriceBeforeDiscount']); ?>
 													</span>
 												</div>
 											</div>
@@ -402,7 +402,7 @@ if (isset($_POST['submit'])) {
 											</div>
 
 											<div class="col-sm-7">
-												<?php if ($row['productAvailability'] == 'In Stock') { ?>
+												<?php if ($row['bookAvailability'] == 'In Stock') { ?>
 													<a href="product-details.php?page=product&action=add&id=<?php echo $row['id']; ?>"
 														class="btn btn-primary"><i
 															class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</a>
@@ -446,7 +446,7 @@ if (isset($_POST['submit'])) {
 										<div id="description" class="tab-pane in active">
 											<div class="product-tab">
 												<p class="text">
-													<?php echo $row['productDescription']; ?>
+													<?php echo $row['bookDescription']; ?>
 												</p>
 											</div>
 										</div><!-- /.tab-pane -->
@@ -629,7 +629,7 @@ if (isset($_POST['submit'])) {
 								</div><!-- /.product-image -->
 								<div class="product-info text-left">
 									<h3 class="name"><a
-											href="product-details.php?pid=<?php echo htmlentities($rw['id']); ?>"><?php echo htmlentities($rw['productName']); ?></a></h3>
+											href="product-details.php?pid=<?php echo htmlentities($rw['id']); ?>"><?php echo htmlentities($rw['bookName']); ?></a></h3>
 									<div class="rating rateit-small"></div>
 									<div class="description"></div>
 
@@ -639,7 +639,7 @@ if (isset($_POST['submit'])) {
 											<?php echo htmlentities($rw['bookPrice']); ?>
 										</span>
 										<span class="price-before-discount">Rs.
-											<?php echo htmlentities($rw['productPriceBeforeDiscount']); ?>
+											<?php echo htmlentities($rw['bookPriceBeforeDiscount']); ?>
 										</span>
 									</div><!-- /.product-price -->
 								</div><!-- /.product-info -->

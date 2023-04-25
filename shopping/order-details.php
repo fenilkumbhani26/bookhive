@@ -83,7 +83,7 @@ include('includes/config.php');
 										<tr>
 											<th class="cart-romove item">#</th>
 											<th class="cart-description item">Image</th>
-											<th class="cart-product-name item">Product Name</th>
+											<th class="cart-product-name item">Book Name</th>
 
 											<th class="cart-qty item">Quantity</th>
 											<th class="cart-sub-total item">Price Per unit</th>
@@ -101,7 +101,7 @@ include('includes/config.php');
 										$ret = mysqli_query($con, "select t.email,t.id from (select usr.email,odrs.id from users as usr join orders as odrs on usr.id=odrs.userId) as t where  t.email='$email' and (t.id='$orderid')");
 										$num = mysqli_num_rows($ret);
 										if ($num > 0) {
-											$query = mysqli_query($con, "select products.productImage1 as pimg1,products.productName as pname,orders.productId as opid,orders.quantity as qty,products.bookPrice as pprice,orders.paymentMethod as paym,orders.orderDate as odate,orders.id as orderid from orders join products on orders.productId=products.id where orders.id='$orderid' and orders.paymentMethod is not null");
+											$query = mysqli_query($con, "select products.productImage1 as pimg1,products.bookName as pname,orders.productId as opid,orders.quantity as qty,products.bookPrice as pprice,orders.paymentMethod as paym,orders.orderDate as odate,orders.id as orderid from orders join products on orders.productId=products.id where orders.id='$orderid' and orders.paymentMethod is not null");
 											$cnt = 1;
 											while ($row = mysqli_fetch_array($query)) {
 												?>

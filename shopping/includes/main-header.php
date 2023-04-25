@@ -95,7 +95,7 @@ if (isset($_Get['action'])) {
 												<div class="col-xs-7">
 
 													<h3 class="name"><a
-															href="product-details.php?pid=<?php echo $row['id']; ?>"><?php echo $row['productName']; ?></a></h3>
+															href="product-details.php?pid=<?php echo $row['id']; ?>"><?php echo $row['bookName']; ?></a></h3>
 													<div class="price">Rs.
 														<?php echo ($row['bookPrice'] + $row['shippingCharge']); ?>*
 														<?php echo $_SESSION['cart'][$row['id']]['quantity']; ?>
