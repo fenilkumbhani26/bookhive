@@ -125,7 +125,7 @@ if (strlen($_SESSION['login']) == 0) {
 													<td class="col-md-6">
 														<div class="product-name"><a
 																href="product-details.php?pid=<?php echo htmlentities($pd = $row['pid']); ?>"><?php echo htmlentities($row['pname']); ?></a></div>
-														<?php $rt = mysqli_query($con, "select * from productreviews where productId='$pd'");
+														<?php $rt = mysqli_query($con, "select * from bookreviews where productId='$pd'");
 														$num = mysqli_num_rows($rt); {
 															?>
 															<div class="rating">

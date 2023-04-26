@@ -215,7 +215,7 @@ if (isset($_POST['shipupdate'])) {
 																	<div class="rating rateit-small"></div>
 																</div>
 																<div class="col-sm-8">
-																	<?php $rt = mysqli_query($con, "select * from productreviews where productId='$pd'");
+																	<?php $rt = mysqli_query($con, "select * from bookreviews where productId='$pd'");
 																	$num = mysqli_num_rows($rt); {
 																		?>
 																		<div class="reviews">

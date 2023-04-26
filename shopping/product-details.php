@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
 	$name = $_POST['name'];
 	$summary = $_POST['summary'];
 	$review = $_POST['review'];
-	mysqli_query($con, "insert into productreviews(productId,quality,price,value,name,summary,review) values('$pid','$qty','$price','$value','$name','$summary','$review')");
+	mysqli_query($con, "insert into bookreviews(productId,quality,price,value,name,summary,review) values('$pid','$qty','$price','$value','$name','$summary','$review')");
 }
 ?>
 
@@ -276,7 +276,7 @@ if (isset($_POST['submit'])) {
 									<h1 class="name">
 										<?php echo htmlentities($row['bookName']); ?>
 									</h1>
-									<?php $rt = mysqli_query($con, "select * from productreviews where productId='$pid'");
+									<?php $rt = mysqli_query($con, "select * from bookreviews where productId='$pid'");
 									$num = mysqli_num_rows($rt); {
 										?>
 										<div class="rating-reviews m-t-20">
@@ -456,7 +456,7 @@ if (isset($_POST['submit'])) {
 
 												<div class="product-reviews">
 													<h4 class="title">Customer Reviews</h4>
-													<?php $qry = mysqli_query($con, "select * from productreviews where productId='$pid'");
+													<?php $qry = mysqli_query($con, "select * from bookreviews where productId='$pid'");
 													while ($rvw = mysqli_fetch_array($qry)) {
 														?>
 

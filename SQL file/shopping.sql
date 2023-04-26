@@ -147,10 +147,10 @@ CREATE TABLE `ordertrackhistory` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productreviews`
+-- Table structure for table `bookreviews`
 --
 
-CREATE TABLE `productreviews` (
+CREATE TABLE `bookreviews` (
   `id` int(11) NOT NULL,
   `productId` int(11) DEFAULT NULL,
   `quality` int(11) DEFAULT NULL,
@@ -295,9 +295,9 @@ ALTER TABLE `ordertrackhistory`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `productreviews`
+-- Indexes for table `bookreviews`
 --
-ALTER TABLE `productreviews`
+ALTER TABLE `bookreviews`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -356,13 +356,13 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `ordertrackhistory`
 --
 ALTER TABLE `ordertrackhistory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
--- AUTO_INCREMENT for table `productreviews`
+-- AUTO_INCREMENT for table `bookreviews`
 --
-ALTER TABLE `productreviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `bookreviews`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT for table `products`
