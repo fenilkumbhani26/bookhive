@@ -124,7 +124,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 													<h4 class="info-box-heading green">money back</h4>
 												</div>
 											</div>
-											<h6 class="text">30 Day Money Back Guarantee.</h6>
+											<h6 class="text">7 Day Money Back Guarantee.</h6>
 										</div>
 									</div><!-- .col -->
 

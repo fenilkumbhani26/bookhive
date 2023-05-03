@@ -12,11 +12,11 @@ if (strlen($_SESSION['alogin']) == 0) {
 		$bookauthor = $_POST['bookAuthor'];
 		$bookprice = $_POST['bookPrice'];
 		$productpricebd = $_POST['productpricebd'];
-		$bookDescription = $_POST['bookDescription'];
+		$bookdescription = $_POST['bookDescription'];
 		$productscharge = $_POST['productShippingcharge'];
 		$bookavailability = $_POST['bookAvailability'];
 
-		$sql = mysqli_query($con, "update  products set category='$category',subCategory='$subcat',bookName='$productname',bookAuthor='$bookauthor',bookPrice='$bookprice',bookDescription='$bookDescription',shippingCharge='$productscharge',bookAvailability='$bookavailability',bookPriceBeforeDiscount='$productpricebd' where id='$pid' ");
+		$sql = mysqli_query($con, "update  products set category='$category',subCategory='$subcat',bookName='$productname',bookAuthor='$bookauthor',bookPrice='$bookprice',bookDescription='$bookdescription',shippingCharge='$productscharge',bookAvailability='$bookavailability',bookPriceBeforeDiscount='$productpricebd' where id='$pid' ");
 		$_SESSION['msg'] = "Product Updated Successfully !!";
 
 	}
@@ -173,8 +173,8 @@ if (strlen($_SESSION['alogin']) == 0) {
 												<div class="controls">
 													<textarea name="bookDescription" placeholder="Enter Book Description"
 														rows="6" class="span8 tip">
-																																																																		<?php echo htmlentities($row['bookDescription']); ?>
-																																																																		</textarea>
+																<?php echo htmlentities($row['bookDescription']); ?>
+																</textarea>
 												</div>
 											</div>
 

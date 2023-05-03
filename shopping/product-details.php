@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 	<meta name="author" content="">
 	<meta name="keywords" content="MediaCenter, Template, eCommerce">
 	<meta name="robots" content="all">
-	<title>Product Details</title>
+	<title>Book Details</title>
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/green.css">
@@ -95,7 +95,9 @@ if (isset($_POST['submit'])) {
 				while ($rw = mysqli_fetch_array($ret)) {
 					?>
 					<ul class="list-inline list-unstyled">
-						<li><a href="index.php">Home</a></li>
+						<li>
+							<a href="index.php">Home</a>
+						</li>
 						<li>
 							<?php echo htmlentities($rw['catname']); ?></a>
 						</li>

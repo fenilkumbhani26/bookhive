@@ -167,7 +167,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 											<div class="controls">
 												<textarea name="bookDescription" placeholder="Enter Book Description"
 													rows="6" class="span8 tip">
-																																	</textarea>
+																																						</textarea>
 											</div>
 										</div>
 
