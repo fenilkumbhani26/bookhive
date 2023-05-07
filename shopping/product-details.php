@@ -615,7 +615,7 @@ if (isset($_POST['submit'])) {
 			<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
 
 				<?php
-				$qry = mysqli_query($con, "select * from products where subCategory='$subcid' and category='$cid'");
+				$qry = mysqli_query($con, "select * from products where category='$cid' limit 4");
 				while ($rw = mysqli_fetch_array($qry)) {
 					?>
 					<div class="item item-carousel">
