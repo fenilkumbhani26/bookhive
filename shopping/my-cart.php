@@ -128,7 +128,7 @@ if (isset($_POST['shipupdate'])) {
 		<div class="container">
 			<div class="breadcrumb-inner">
 				<ul class="list-inline list-unstyled">
-					<li><a href="#">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li class='active'>Shopping Cart</li>
 				</ul>
 			</div><!-- /.breadcrumb-inner -->
