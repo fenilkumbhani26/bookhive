@@ -22,12 +22,13 @@
 
                             <div class="social-icons">
 
-                                <a href="http://facebook.com/transvelo" class='active'><i
-                                        class="icon fa fa-facebook"></i></a>
-                                <a href="#"><i class="icon fa fa-twitter"></i></a>
-                                <a href="#"><i class="icon fa fa-linkedin"></i></a>
-                                <a href="#"><i class="icon fa fa-rss"></i></a>
+                                <a href="http://facebook.com/transvelo" class='active'>
+                                    <i class="icon fa fa-instagram"></i>
+                                </a>
                                 <a href="#"><i class="icon fa fa-pinterest"></i></a>
+                                <a href="#"><i class="icon fa fa-linkedin"></i></a>
+                                <a href="#"><i class="icon fa fa-facebook"></i></a>
+                                <a href="#"><i class="icon fa fa-twitter"></i></a>
 
                             </div><!-- /.social-icons -->
                         </div><!-- /.module-body -->
@@ -49,15 +50,15 @@
                                     <tbody>
                                         <tr>
                                             <td>Monday-Friday:</td>
-                                            <td class="pull-right">08.00 To 18.00</td>
+                                            <td class="pull-right">09.00 AM To 10.00 PM</td>
                                         </tr>
                                         <tr>
                                             <td>Saturday:</td>
-                                            <td class="pull-right">09.00 To 20.00</td>
+                                            <td class="pull-right">09.00 AM To 08.00 PM</td>
                                         </tr>
                                         <tr>
                                             <td>Sunday:</td>
-                                            <td class="pull-right">10.00 To 20.00</td>
+                                            <td class="pull-right">09.00 AM To 08.00 PM</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -96,7 +97,7 @@
                                         </span>
                                     </div>
                                     <div class="media-body">
-                                        <p>+91 8155858940</p>
+                                        <p>+91 63555 88880</p>
                                     </div>
                                 </li>
 

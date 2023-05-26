@@ -90,7 +90,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 						<div id="hero" class="homepage-slider3">
 							<div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
 								<div class="full-width-slider">
-									<div class="item" style="background-image: url(assets/images/sliders/slider1.jpg);">
+									<div class="item" style="background-image: url(assets/images/sliders/slider3.jpg);">
 										<!-- /.container-fluid -->
 									</div><!-- /.item -->
 								</div><!-- /.full-width-slider -->
@@ -103,7 +103,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 
 								<div class="full-width-slider">
 									<div class="item full-width-slider"
-										style="background-image: url(assets/images/sliders/slider3.jpg);">
+										style="background-image: url(assets/images/sliders/slider1.jpg);">
 									</div><!-- /.item -->
 								</div><!-- /.full-width-slider -->
 
@@ -118,7 +118,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 										<div class="info-box">
 											<div class="row">
 												<div class="col-xs-2">
-													<i class="icon fa fa-dollar"></i>
+													<i class="icon fa fa-rupee"></i>
 												</div>
 												<div class="col-xs-10">
 													<h4 class="info-box-heading green">money back</h4>

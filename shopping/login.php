@@ -141,7 +141,7 @@ if (isset($_POST['login'])) {
 		<div class="container">
 			<div class="breadcrumb-inner">
 				<ul class="list-inline list-unstyled">
-					<li><a href="home.html">Home</a></li>
+					<li><a href="index.php">Home</a></li>
 					<li class='active'>Authentication</li>
 				</ul>
 			</div><!-- /.breadcrumb-inner -->
@@ -225,18 +225,6 @@ if (isset($_POST['login'])) {
 							<button type="submit" name="submit" class="btn-upper btn btn-primary checkout-page-button"
 								id="submit">Sign Up</button>
 						</form>
-						<span class="checkout-subtitle outer-top-xs">Sign Up Today And You'll Be Able To : </span>
-						<div class="checkbox">
-							<label class="checkbox">
-								Speed your way through the checkout.
-							</label>
-							<label class="checkbox">
-								Track your orders easily.
-							</label>
-							<label class="checkbox">
-								Keep a record of all your purchases.
-							</label>
-						</div>
 					</div>
 					<!-- create a new account -->
 				</div><!-- /.row -->

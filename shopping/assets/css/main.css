@@ -1294,6 +1294,11 @@ a {
   margin-top: 10px;
 }
 
+.main-header .logo-holder .logo a:hover,
+a:focus {
+  color: #abd07e;
+}
+
 .main-header .top-search-holder .contact-row {
   line-height: 20px;
   color: #9b9b9b;
@@ -1529,7 +1534,7 @@ a {
 .header-style-1 .header-nav .navbar-default .navbar-collapse .navbar-nav>li>a {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
   color: #FFFFFF;
-  font-family: 'FjallaOneRegular';
+  /* font-family: 'FjallaOneRegular'; */
   font-size: 20px;
   line-height: 20px;
   padding: 21px 29px;
@@ -1775,6 +1780,7 @@ a {
   border-radius: 0px;
   color: #FFFFFF;
   font-size: 18px;
+  letter-spacing: 0.5;
   font-family: 'FjallaOneRegular';
   padding: 15px 17px;
   text-transform: uppercase;
@@ -2911,6 +2917,7 @@ a {
 
 .info-boxes .info-box .text {
   color: #666666;
+  font-family: 'roboto';
   text-transform: uppercase;
   font-weight: 500;
   font-size: 13px;

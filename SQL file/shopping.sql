@@ -48,12 +48,12 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `categoryName`, `categoryDescription`, `creationDate`, `updationDate`) VALUES
-(1, 'Fiction', '', '2021-06-19 06:40:06', NULL),
-(2, 'Non-Fiction', '', '2021-06-19 06:40:32', NULL),
-(3, 'Poetry ', '', '2021-06-19 06:41:11', NULL),
-(4, 'Drama/Plays', '', '2021-06-19 06:41:21', NULL),
-(5, 'Academic/Textbooks', '', '2021-06-19 06:41:27', NULL),
-(6, 'Reference', '', '2021-06-19 06:43:29', NULL);
+(1, 'Fiction', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2021-06-19 06:40:06', NULL),
+(2, 'Non-Fiction', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2021-06-19 06:40:32', NULL),
+(3, 'Poetry ', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2021-06-19 06:41:11', NULL),
+(4, 'Drama', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2021-06-19 06:41:21', NULL),
+(5, 'Academic', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2021-06-19 06:41:27', NULL),
+(6, 'Reference', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', '2021-06-19 06:43:29', NULL);
 
 -- --------------------------------------------------------
 

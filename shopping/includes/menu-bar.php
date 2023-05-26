@@ -32,3 +32,15 @@
         </div>
     </div>
 </div>
+
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="text/javascript">
+    $(function () {
+        var href = window.location.href;
+        $('li a').each(function (e, i) {
+            if (href.indexOf($(this).attr('href')) >= 0) {
+                $(this).closest('.dropdown').addClass('active');
+            }
+        });
+    });
+</script>
