@@ -1296,7 +1296,7 @@ a {
 
 .main-header .logo-holder .logo a:hover,
 a:focus {
-  color: #abd07e;
+  color: #27374D;
 }
 
 .main-header .top-search-holder .contact-row {
@@ -1784,7 +1784,7 @@ a:focus {
   font-family: 'FjallaOneRegular';
   padding: 15px 17px;
   text-transform: uppercase;
-  background: #333333;
+  background: #27374D;
 }
 
 .sidebar .side-menu .head .icon {
@@ -3038,9 +3038,11 @@ a:focus {
 }
 
 .product .cart .action ul li.add-cart-button .btn.btn-primary.icon {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  border-radius: 4px;
+  /* border-bottom-right-radius: 0;
+  border-top-right-radius: 0; */
   background: #575757;
+  margin-right: 10px;
 }
 
 .product .cart .action ul li.lnk {
@@ -3986,7 +3988,7 @@ a:focus {
 
 .search-result-container .category-product .product .cart .lnk a {
   background: #a8a8a8;
-  padding: 8px 11px !important;
+  padding: 9px 11px !important;
   margin-left: 10px;
   color: #fff !important;
   -webkit-border-radius: 4px;
