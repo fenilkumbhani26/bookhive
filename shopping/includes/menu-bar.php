@@ -14,7 +14,7 @@
                 <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
                     <div class="nav-outer">
                         <ul class="nav navbar-nav">
-                            <li class="active dropdown yamm-fw">
+                            <li class="dropdown yamm-fw">
                                 <a href="index.php" data-hover="dropdown" class="dropdown-toggle">Home</a>
                             </li>
                             <?php $sql = mysqli_query($con, "select id,categoryName  from category limit 6");
@@ -34,7 +34,7 @@
 </div>
 
 <script src="assets/js/jquery-1.11.1.min.js"></script>
-<script src="text/javascript">
+<script type="text/javascript">
     $(function () {
         var href = window.location.href;
         $('li a').each(function (e, i) {

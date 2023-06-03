@@ -135,7 +135,7 @@ if (isset($_GET['action']) && $_GET['action'] == "add") {
 													<i class="icon fa fa-truck"></i>
 												</div>
 												<div class="col-xs-10">
-													<h4 class="info-box-heading orange">free shipping</h4>
+													<h4 class="info-box-heading yellow">free shipping</h4>
 												</div>
 											</div>
 											<h6 class="text">free ship-on oder over Rs. 400.00</h6>

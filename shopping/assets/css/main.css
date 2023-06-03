@@ -718,7 +718,7 @@ a {
 }
 
 .info-box .info-box-heading.green {
-  color: #12cca7;
+  color: #98D8AA;
 }
 
 .scroll-tabs .nav-tab-line li a:hover,
@@ -2907,12 +2907,12 @@ a:focus {
   margin-top: 5px;
 }
 
-.info-boxes .info-box .info-box-heading.orange {
-  color: #ffb847;
+.info-boxes .info-box .info-box-heading.red {
+  color: #FF6D60;
 }
 
-.info-boxes .info-box .info-box-heading.red {
-  color: #ff7878;
+.info-boxes .info-box .info-box-heading.yellow {
+  color: #F7D060;
 }
 
 .info-boxes .info-box .text {
